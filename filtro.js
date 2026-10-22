@@ -1,10 +1,10 @@
-const botones = document.querySelectorAll('.filtro-btn');
+const botones = document.querySelectorAll('.btn-filtro');
 const tarjetas = document.querySelectorAll('.producto');
 
 function filtrarProductos(categoria) {
   let visibles = 0;
   tarjetas.forEach(tarjeta => {
-    const coincide = categoria === 'todos' || tarjeta.dataset.category === categoria;
+    const coincide = categoria === 'todos' || tarjeta.dataset.categoria === categoria;
     tarjeta.hidden = !coincide;
     if (coincide) visibles++;
   });
@@ -21,9 +21,9 @@ function marcarActivo(boton) {
 botones.forEach(boton => {
   boton.addEventListener('click', () => {
     marcarActivo(boton);
-    filtrarProductos(boton.dataset.filter);
+    filtrarProductos(boton.dataset.filtro);
   });
 });
 
 filtrarProductos('todos');
-marcarActivo(document.querySelector('[data-filter="todos"]'));
+marcarActivo(document.querySelector('[data-filtro="todos"]'));

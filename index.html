@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tienda de Cómics</title>
+  <title>Galaxy Geek | Cómics y manga</title>
   <link rel="stylesheet" href="style.css">
   <script src="filtro.js" defer></script>
 </head>
@@ -15,28 +15,34 @@
 
   <main>
     <h2>Catálogo</h2>
+    <div class="filtros" id="filtros">
+      <button class="btn-filtro activo" data-filtro="todos">Todos</button>
+      <button class="btn-filtro" data-filtro="superheroes">Superhéroes</button>
+      <button class="btn-filtro" data-filtro="manga">Manga</button>
+      <button class="btn-filtro" data-filtro="novelas-graficas">Novelas gráficas</button>
+    </div>
     <section class="catalogo" id="catalogo">
-      <article class="producto">
+      <article class="producto" data-categoria="superheroes">
         <h3>Spider-Man: Azul</h3>
         <p>Precio: $350</p>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="superheroes">
         <h3>Batman: Año Uno</h3>
         <p>Precio: $320</p>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="manga">
         <h3>Naruto Vol. 1</h3>
         <p>Precio: $180</p>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="manga">
         <h3>One Piece Vol. 1</h3>
         <p>Precio: $190</p>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="novelas-graficas">
         <h3>Maus</h3>
         <p>Precio: $420</p>
       </article>
-      <article class="producto">
+      <article class="producto" data-categoria="novelas-graficas">
         <h3>Persépolis</h3>
         <p>Precio: $390</p>
       </article>
